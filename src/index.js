@@ -3,20 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function SecondHand(props){
-    let style = {
+    let handStyle = {
         backgroundColor: 'red',
         width: '3px',
-        height: '246px',
+        height: '313px',
         position: 'absolute',
         border: '1px solid black',
         borderRadius: '2px',
-        transform: 'translate(0, -123px) rotate(' + props.angle + 'deg)',
-        transformOrigin: '2px 100%'
+        transform: 'rotate(' + props.angle + 'deg) translate(0, -83px)',
+    };
+
+    let counterWeightStyle = {
+        width: '20px',
+        height: '20px',
+        position: 'absolute',
+        border: '3px solid red',
+        borderRadius: '100%',
+        transform: 'rotate(' + props.angle + 'deg) translate(0, 86px)',
     };
 
     return (
         <div id='second-hand-container'>
-            <div style={style}></div>
+            <div style={handStyle}></div>
+            <div style={counterWeightStyle}></div>
             <div id='second-hand-pivot'></div>
         </div>
     )
